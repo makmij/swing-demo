@@ -1,17 +1,7 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.github.boegl:gradle-launch4j:3.11'
-    }
-}
-
 plugins {
     id 'java'
+    id 'edu.sc.seis.launch4j' version '4.0.0'
 }
-
-apply plugin: 'launch4j'
 
 repositories {
     mavenCentral()
@@ -24,6 +14,4 @@ dependencies {
 
 launch4j {
     mainClassName = 'ru.ksu.fof.view.MainFrame'
-    outfile = 'build/exe/SwingDemo.exe'
-    jar = 'build/libs/swing-demo.jar'
 }
